@@ -80,5 +80,5 @@ class TestCases(unittest.TestCase):
             self.assertCountEqual(color, self.test_cases['color'][ix])
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     unittest.main()

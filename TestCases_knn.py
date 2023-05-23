@@ -43,5 +43,5 @@ class TestCases(unittest.TestCase):
             np.testing.assert_array_equal(preds, self.test_cases['get_class'][ix])
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     unittest.main()
