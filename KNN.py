@@ -28,7 +28,7 @@ class KNN:
         dim = np.array([], dtype = float)
         dim = np.shape(train_data)
 
-        self.train_data = train_data.reshape(dim[0], 4800)
+        self.train_data = train_data.reshape(dim[0], -1)
         self.train_data = self.train_data.astype(type(np.inf))
 
     def get_k_neighbours(self, test_data, k):
@@ -44,7 +44,7 @@ class KNN:
         ##  AND CHANGE FOR YOUR OWN CODE
         #######################################################
         dim = np.shape(test_data)
-        test_data = test_data.reshape(dim[0], dim[1] * dim[2])
+        test_data = test_data.reshape(dim[0], -1)
 
         euc = cdist(test_data, self.train_data, "euclidean")
         ordre = np.argsort(euc, axis=1)
